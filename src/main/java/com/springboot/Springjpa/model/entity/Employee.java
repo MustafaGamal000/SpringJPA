@@ -1,5 +1,6 @@
 package com.springboot.Springjpa.model.entity;
 
+import com.springboot.Springjpa.model.dto.EmployeeDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,4 +22,12 @@ public class Employee {
     @Column(name = "last_name")
     private String lastname;
     private Double salary;
+
+    public static Employee toEntity(EmployeeDto emp){
+        return Employee.builder()
+                .id(emp.getId())
+                .firstname(emp.getFirstname())
+                .lastname(emp.getLastname())
+                .build();
+    }
 }
