@@ -25,4 +25,9 @@ public class EmpController {
     public void deleteEmp(@RequestParam int id){
         empService.deleteEmp(id);
     }
+
+    @PostMapping("/update-emp")
+    public Employee updateEmp(@RequestBody Employee emp){
+        return empService.updateEmp(emp);
+    }
 }

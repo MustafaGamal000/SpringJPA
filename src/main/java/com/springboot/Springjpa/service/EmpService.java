@@ -25,4 +25,8 @@ public class EmpService {
     public void deleteEmp(int id) {
         repo.deleteById(id);
     }
+
+    public Employee updateEmp(Employee emp) {
+        return repo.save(emp);
+    }
 }
