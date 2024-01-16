@@ -22,4 +22,4 @@ Learn how to seamlessly integrate data access functionality, handle database ope
 - [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html)
 - [Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference)
 - [Hibernate Documentation](https://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html)
-- [video Tutorial and Project Code](https://www.youtube.com/watch?v=lWn1P42Oshw).
+- [Video Tutorial and Project Code](https://www.youtube.com/watch?v=lWn1P42Oshw).
