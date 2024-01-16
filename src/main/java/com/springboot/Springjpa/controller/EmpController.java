@@ -5,6 +5,8 @@ import com.springboot.Springjpa.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/emp")
 public class EmpController {
@@ -29,5 +31,10 @@ public class EmpController {
     @PostMapping("/update-emp")
     public Employee updateEmp(@RequestBody Employee emp){
         return empService.updateEmp(emp);
+    }
+
+    @GetMapping("/get-all")
+    public List<Employee> getAllEmp(){
+        return empService.getAllEmp();
     }
 }

@@ -5,6 +5,7 @@ import com.springboot.Springjpa.repository.EmpRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -28,5 +29,9 @@ public class EmpService {
 
     public Employee updateEmp(Employee emp) {
         return repo.save(emp);
+    }
+
+    public List<Employee> getAllEmp() {
+        return repo.findAll();
     }
 }
