@@ -11,6 +11,8 @@ public class EmpController {
     @Autowired
     private EmpService empService;
 
-    //Find Employee by ID
-    
+    @GetMapping("/get-emp")
+    public Employee getEmp(@RequestParam int id){
+        return empService.getUserById(id);
+    }
 }
