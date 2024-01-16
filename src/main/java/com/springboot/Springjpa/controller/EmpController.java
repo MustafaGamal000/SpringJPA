@@ -17,7 +17,12 @@ public class EmpController {
     }
 
     @PostMapping("/add-emp")
-    public Employee addEmp(Employee emp){
+    public Employee addEmp(@RequestBody Employee emp){
         return empService.save(emp);
+    }
+
+    @PostMapping("/delete-emp")
+    public void deleteEmp(@RequestParam int id){
+        empService.deleteEmp(id);
     }
 }

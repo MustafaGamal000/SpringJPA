@@ -21,4 +21,8 @@ public class EmpService {
     public Employee save(Employee emp) {
         return repo.save(emp);
     }
+
+    public void deleteEmp(int id) {
+        repo.deleteById(id);
+    }
 }
