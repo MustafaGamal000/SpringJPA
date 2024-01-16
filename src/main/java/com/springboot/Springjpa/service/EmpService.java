@@ -1,5 +1,6 @@
 package com.springboot.Springjpa.service;
 
+import com.springboot.Springjpa.model.dto.EmployeeDto;
 import com.springboot.Springjpa.model.entity.Employee;
 import com.springboot.Springjpa.repository.EmpRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,9 @@ public class EmpService {
     @Autowired
     private EmpRepository repo ;
 
-    public Employee getUserById(int id){
+    public EmployeeDto getUserById(int id){
         Optional<Employee> emp = this.repo.findById(id);
-        return emp.orElse(new Employee());
+        return emp.map(EmployeeDto::toDto).orElse(null);
     }
 
     public Employee save(Employee emp) {

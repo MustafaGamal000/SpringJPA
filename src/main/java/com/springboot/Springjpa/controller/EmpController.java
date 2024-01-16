@@ -1,5 +1,6 @@
 package com.springboot.Springjpa.controller;
 
+import com.springboot.Springjpa.model.dto.EmployeeDto;
 import com.springboot.Springjpa.model.entity.Employee;
 import com.springboot.Springjpa.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class EmpController {
     private EmpService empService;
 
     @GetMapping("/get-emp")
-    public Employee getEmp(@RequestParam int id){
+    public EmployeeDto getEmp(@RequestParam int id){
         return empService.getUserById(id);
     }
 
