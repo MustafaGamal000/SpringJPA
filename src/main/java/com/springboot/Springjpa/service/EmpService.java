@@ -17,4 +17,8 @@ public class EmpService {
         Optional<Employee> emp = this.repo.findById(id);
         return emp.orElse(new Employee());
     }
+
+    public Employee save(Employee emp) {
+        return repo.save(emp);
+    }
 }

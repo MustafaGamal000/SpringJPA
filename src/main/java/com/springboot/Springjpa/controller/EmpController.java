@@ -15,4 +15,9 @@ public class EmpController {
     public Employee getEmp(@RequestParam int id){
         return empService.getUserById(id);
     }
+
+    @PostMapping("/add-emp")
+    public Employee addEmp(Employee emp){
+        return empService.save(emp);
+    }
 }
