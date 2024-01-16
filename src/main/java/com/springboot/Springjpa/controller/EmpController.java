@@ -20,18 +20,18 @@ public class EmpController {
     }
 
     @PostMapping("/add-emp")
-    public Employee addEmp(@RequestBody Employee emp){
+    public EmployeeDto addEmp(@RequestBody EmployeeDto emp){
         return empService.save(emp);
+    }
+
+    @PostMapping("/update-emp")
+    public EmployeeDto updateEmp(@RequestBody EmployeeDto emp){
+        return empService.updateEmp(emp);
     }
 
     @PostMapping("/delete-emp")
     public void deleteEmp(@RequestParam int id){
         empService.deleteEmp(id);
-    }
-
-    @PostMapping("/update-emp")
-    public Employee updateEmp(@RequestBody Employee emp){
-        return empService.updateEmp(emp);
     }
 
     @GetMapping("/get-all")

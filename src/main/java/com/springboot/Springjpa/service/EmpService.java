@@ -20,16 +20,16 @@ public class EmpService {
         return emp.map(EmployeeDto::toDto).orElse(null);
     }
 
-    public Employee save(Employee emp) {
-        return repo.save(emp);
+    public EmployeeDto save(EmployeeDto emp) {
+        return EmployeeDto.toDto(repo.save(Employee.toEntity(emp)));
     }
 
     public void deleteEmp(int id) {
         repo.deleteById(id);
     }
 
-    public Employee updateEmp(Employee emp) {
-        return repo.save(emp);
+    public EmployeeDto updateEmp(EmployeeDto emp) {
+        return EmployeeDto.toDto(repo.save(Employee.toEntity(emp)));
     }
 
     public List<Employee> getAllEmp() {
